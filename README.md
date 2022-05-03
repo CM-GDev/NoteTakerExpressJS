@@ -3,8 +3,8 @@
 
   ## Description
   
-  - This is my first homework assignment using Herokut to host my first server for the Full Stack Web Developer course I'm enrolled in. 
-  - By completing this assignment, I was able to implement lessons from my course, including: Set Jest.js tests, Code JavaScript for a Node.js application, Establish Classes , Implement several JS modules, work with a CSS framework, Use FS.js to create and append files, and finally apply Inquirer.js for the user interface on the command-line.
+  - This is my first homework assignment using Heroku to host my first server for the Full Stack Web Developer course I'm enrolled in. 
+  - By completing this assignment, I was able to implement lessons from my course, including: Using ExpressJS, Code JavaScript for a Node.js application, Implement several JS modules, work with a CSS framework, Use FS.js to create and append files, and finally create a simple database to store persistence data.
 
   
 
