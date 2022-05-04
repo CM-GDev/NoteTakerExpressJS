@@ -1,4 +1,4 @@
-// Calling Express modules required for code
+// Installing Express modules required for code
 const fs = require('fs');
 const util = require('util');
 
@@ -48,14 +48,14 @@ const deleteID = (id, file)=> {
       // console.log(data);
       const parsedData = JSON.parse(data);
       // console.log(parsedData);
-      //Use .some to see if an object contians the same "id" argument
+      //Use .some to see if db contians an obj that matches "id" (true or false)
       const found = parsedData.some(obj => obj.id === id);
       // console.log(found);
 
       if(!found){
         console.error(err)
       } else{
-        
+        // Using .filter to create new array without the obj that matched the 'id' argument
         newData = parsedData.filter(obj => obj.id !== id);
         writeToFile(file, newData);
       }

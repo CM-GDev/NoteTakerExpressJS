@@ -1,5 +1,7 @@
+// Installing necessary Express modules
 const express = require('express');
 const path = require('path');
+// INstalling modular router "notesRouter"
 const notesRouter = require('./routes/notesRouter')
 
 const PORT = process.env.PORT || 3001;
