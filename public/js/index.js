@@ -69,7 +69,7 @@ const renderActiveNote = () => {
 const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
-    text: noteText.value,
+    text: noteText.value
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
@@ -88,7 +88,7 @@ const handleNoteDelete = (e) => {
   if (activeNote.id === noteId) {
     activeNote = {};
   }
-
+  // console.log(noteId);
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -176,7 +176,7 @@ const getAndRenderNotes = () => getNotes().then(renderNoteList);
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
-  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
+  noteTitle.addEventListener('keyup', handleRenderSaveBtn);//Why is this not working
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
