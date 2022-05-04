@@ -38,15 +38,18 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     console.info(`${req.method} request received for notes`);
 
+    // const id2 = req.params.id; 
+    // console.log(id2);
+    
     const id = req.url;
     // removing "/" from ID sent in 'req'
-    const cleanID = id.slice(1);
+    const requestID = id.slice(1);
         
     // console.log(id);
-    console.log(cleanID);
+    console.log(requestID);
 
     if(req.body) { 
-        deleteID(cleanID,'./db/db.json');
+        deleteID(requestID,'./db/db.json');
         res.json(`Note successfully deleted`);
     } else {
       res.error('Error in deleting note');
